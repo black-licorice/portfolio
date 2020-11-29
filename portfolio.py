@@ -30,3 +30,8 @@ def contact_me():
         write_to_csv(data)
         return redirect('/submitted')
     return 'Something went wrong'
+
+
+@app.route('/museumOfCandy')
+def museum_of_candy():
+    return render_template('museumOfCandy.html')
