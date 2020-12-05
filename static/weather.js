@@ -1,12 +1,13 @@
 // get elements
 const form = document.querySelector('.top-banner form');
+const submit = document.querySelector('.btn-primary');
 const msg = document.querySelector('.message');
 const list = document.querySelector('ul');
 // define empty arr for holding, for checking if a city is already on the page
 var dataArr = []
 
-
-form.addEventListener('submit', el => {
+// submit gets click event, unable to listen for submit events from mobile users
+submit.addEventListener('click', el => {
     // prevent form from submitting
     el.preventDefault();
     const usrInput = document.querySelector('#userInput').value;
