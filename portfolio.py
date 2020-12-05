@@ -35,3 +35,8 @@ def contact_me():
 @app.route('/museumOfCandy')
 def museum_of_candy():
     return render_template('museumOfCandy.html')
+
+
+@app.route('/weatherNow')
+def weather_now():
+    return render_template('weather.html')
