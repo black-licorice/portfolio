@@ -10,7 +10,6 @@ form.addEventListener('submit', el => {
     // prevent form from submitting
     el.preventDefault();
     const usrInput = document.querySelector('#userInput').value;
-    const KEY = 'af9d0f46d6866be379751ea83c0754e5'
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${usrInput}&appid=${KEY}&units=metric`;
     fetch(url)
       .then(res => res.json())
