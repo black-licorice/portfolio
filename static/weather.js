@@ -20,7 +20,7 @@ submit.addEventListener('click', el => {
             const icon = `https://openweathermap.org/img/wn/${weather[0]['icon']}@2x.png`;
             // markup for weather card
             const markup = `
-            <li class="city card">
+            <li class="city card col-12">
                 <h2 class="city-name card-title">
                     ${name}, ${sys.country}
                 </h2>
