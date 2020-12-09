@@ -1,4 +1,5 @@
 from flask import Flask, render_template, url_for, request, redirect
+import os
 import csv
 app = Flask(__name__)
 print(__name__)
@@ -39,4 +40,5 @@ def museum_of_candy():
 
 @app.route('/weatherNow')
 def weather_now():
-    return render_template('weather.html')
+    KEY = os.getenv("KEY")
+    return render_template('weather.html', KEY=KEY)

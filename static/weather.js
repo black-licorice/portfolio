@@ -6,8 +6,18 @@ const list = document.querySelector('ul');
 // define empty arr for holding, for checking if a city is already on the page
 var dataArr = []
 
-// factor a main funciton to be called for multiple events
-function main(){
+// MAIN FUNCTION
+function main(KEY){
+    // submit gets click event
+    submit.addEventListener('click',  el => {
+        // prevent form from submitting
+        el.preventDefault();
+        build(KEY);
+    });
+
+
+// factor a build funciton to be called for multiple events
+function build(KEY){
     const usrInput = document.querySelector('#userInput').value;
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${usrInput}&appid=${KEY}&units=metric`;
     try {
@@ -23,21 +33,16 @@ function main(){
         msg.classList.remove('alert-warning');
         msg.classList.add('alert-danger');
         form.reset();
-    } 
+    }
 }
 
-// submit gets click event
-submit.addEventListener('click',  el => {
-    // prevent form from submitting
-    el.preventDefault();
-    main();
-});
+    // mobile users' touch event listener
+    submit.addEventListener('touchstart', el => {
+        el.preventDefault();
+        build(KEY);
+    });
+}
 
-// mobile users' touch event listener
-submit.addEventListener('touchstart', el => {
-    el.preventDefault();
-    main();
-})
 
 // loads fetches data from api and builds and appends a card to the page
 async function loadWeather(url){
