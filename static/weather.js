@@ -4,7 +4,7 @@ const submit = document.querySelector('.btn-primary');
 const msg = document.querySelector('.message');
 const list = document.querySelector('ul');
 // define empty arr for holding, for checking if a city is already on the page
-var dataArr = []
+const dataArr = []
 
 // MAIN FUNCTION
 function main(KEY){
@@ -14,16 +14,21 @@ function main(KEY){
         el.preventDefault();
         build(KEY);
     });
-
+    // mobile users' touch event listener
+    submit.addEventListener('touchstart', el => {
+        el.preventDefault();
+        build(KEY);
+    });
+}
 
 // factor a build funciton to be called for multiple events
-function build(KEY){
+const build = KEY => {
     const usrInput = document.querySelector('#userInput').value;
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${usrInput}&appid=${KEY}&units=metric`;
     try {
         loadWeather(url)
     } catch (error){
-        console.log(err);
+        console.log(error);
         msg.textContent = 'Requested city was not found';
         msg.style.display = 'block';
     }
@@ -36,16 +41,9 @@ function build(KEY){
     }
 }
 
-    // mobile users' touch event listener
-    submit.addEventListener('touchstart', el => {
-        el.preventDefault();
-        build(KEY);
-    });
-}
-
 
 // loads fetches data from api and builds and appends a card to the page
-async function loadWeather(url){
+const loadWeather = async url => {
     const res = await fetch(url);
     if (res.status >= 400 && res.status < 600) {
         msg.textContent = 'Requested city was not found';
@@ -90,7 +88,7 @@ async function loadWeather(url){
 }
 
 // assures that city is not already on the page
-function checkID(resdata){
+const checkID = resdata => {
     for(let i=0; i<dataArr.length; i++){
         // if the requested card's data is in the dataArr, then the card is already on the page
         if(dataArr[i].id === resdata.id){
@@ -108,19 +106,19 @@ function checkID(resdata){
 }
 
 
-function deleteCard(el){
-    // delete child of the parent of el's parent element
-    el.parentElement.parentElement.removeChild(el.parentElement);
+const deleteCard = el => {
+    // delete child of the parent of el's parent element (the li with the "city" class)
+    el.parentElement.parentElement.parentElement.removeChild(el.parentElement.parentElement);
     let title = el.previousSibling.previousSibling.previousSibling.textContent;
-    dataArr.pop(checkTitle(title));
+    dataArr.splice(checkTitle(title), 1);
 };
 
 
-function checkTitle(title){
-    for(let i=0; i<dataArr.length; i++){
-        if(title == dataArr[i].name){
+const checkTitle = title => {
+    for(let card of dataArr){
+        if(title === card.name){
             // if the title of the card is equal to the title of any data object in the dataArr, return it's index in dataArr
-            return i
+            return this.indexOf(title);
         }
     }
 }
