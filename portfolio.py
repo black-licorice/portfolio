@@ -1,7 +1,6 @@
-from flask import Flask, render_template, url_for, request, redirect
-import csv
+from flask import Flask, render_template, request, redirect
+import csv, os
 app = Flask(__name__)
-print(__name__)
 
 
 @app.route('/')
@@ -39,5 +38,9 @@ def museum_of_candy():
 
 @app.route('/weatherNow')
 def weather_now():
-    KEY = "OPEN WEATHER MAP KEY"
+    KEY = os.getenv('KEY')
     return render_template('weather.html', KEY=KEY)
+
+
+if __name__ == '__main__':
+    app.run()
