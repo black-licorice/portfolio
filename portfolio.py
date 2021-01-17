@@ -8,13 +8,22 @@ def home():
     return render_template('index.html')
 
 
-def write_to_csv(data):
-    with open('database.csv', 'a') as database:
-        email = data['email']
-        subject = data['subject']
-        message = data['message']
-        csv_writer = csv.writer(database, delimiter=',', quoting=csv.QUOTE_MINIMAL, lineterminator='\n')
-        csv_writer.writerow([email, subject, message])
+def send_email(data):
+    email = data['email']
+    subject = data['subject']
+    message = data['message']
+    import smtplib
+    gmail_address = os.getenv('EMAIL')
+    gmail_password = os.getenv('EMAIL_PASSWORD')
+    mailto = os.getenv('TO_EMAIL')
+    subject = f'{email} has contacted you, letsssssssss gooooooooo: {subject}'
+    msg = message
+    message = f"Subject: {subject}\n\n{msg}".encode('utf-8')
+    mail_server = smtplib.SMTP('smtp.gmail.com', 587)
+    mail_server.starttls()
+    mail_server.login(gmail_address, gmail_password)
+    mail_server.sendmail(gmail_address, mailto, message)
+    mail_server.quit()
 
 
 @app.route('/<string:page_name>')
@@ -26,7 +35,7 @@ def html_page(page_name):
 def contact_me():
     if request.method == 'POST':
         data = request.form.to_dict()
-        write_to_csv(data)
+        send_email(data)
         return redirect('/submitted')
     return 'Something went wrong'
 
