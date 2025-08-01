@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block link %}
+<link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/projects.css') }}">
+<script src="{{ url_for('static', filename='javascript/projects.js') }}"></script>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="scroll-progress-bar-vertical">
+  <div class="scroll-progress-fill-vertical"></div>
+</div>
+
+<div class="projects-container">
+  {%for i in range(works_size)%}
+  <div class="section-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-10 col-xl-offset-1"> <!-- Container for the carousel, offset to make room for progress bar-->
+          <div id="carousel{{i}}" class="carousel slide projects-carousel"> <!--First carousel for the first project-->
+            <div class="carousel-inner">
+              {% for j in range(works[i].images_size) %}
+                {% if j == 0%}
+                <div class="item active">
+                {% else %}
+                <div class="item">
+                {% endif %}
+                    <div class="row">
+                        <div class="col-lg-12">
+                          <div class="black-image-project-hover">
+                            <a href="{{works[i].link}}"><img src="{{works[i].images[j]}}" alt="" class="img-responsive black-image-project-hover"></a>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+              {% endfor %}
+            </div>
+            <a class="left carousel-control" href="#carousel{{i}}" data-slide="prev">‹</a>
+            <a class="right carousel-control" href="#carousel{{i}}" data-slide="next">›</a>
+            <div class="card-container card-container-lg">
+              <h3>{{works[i].title}}</h3>
+              <p>{{works[i].description}}</p>
+              <p class="h4">Click the cover image to read more</p>
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {%endfor%}
+</div>
+
+
+{% endblock %}

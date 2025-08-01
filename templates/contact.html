@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+
+{% block link %}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/contact.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="contact-universe hero-full-container background-image-container  white-text-container">
+  <div class="contact-container ">
+    <!-- Main Header -->
+    <div class="contact-hero">
+      <div class="hero-content ">
+        <h1 class="contact-title">
+          <span class="title-number">| 04</span>
+          <span class="title-separator">:</span>
+          <span class="title-text">Contact |</span>
+        </h1>
+
+      </div>
+    </div>
+
+    <!-- Contact Grid -->
+    <div class="contact-grid">
+      <!-- Email Section -->
+      <div class="contact-card email-card">
+        <div class="card-header">
+          <div class="icon-container">
+            <i class="fas fa-envelope"></i>
+            <div class="icon-glow"></div>
+          </div>
+          <h3>Digital Communication</h3>
+        </div>
+        <div class="card-content">
+          <div class="email-item professional">
+            <div class="email-label">Professional</div>
+            <a href="mailto:d.judah.trementozzi@mailfence.com" class="email-link">
+              <span class="email-text">d.judah.trementozzi@mailfence.com</span>
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+          <div class="email-item academic">
+            <div class="email-label">Academic</div>
+            <a href="mailto:david.trementozzi@ulb.be" class="email-link">
+              <span class="email-text">david.trementozzi@ulb.be</span>
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Social Media Section -->
+      <div class="contact-card social-card">
+        <div class="card-header">
+          <div class="icon-container">
+            <i class="fas fa-share-nodes"></i>
+            <div class="icon-glow"></div>
+          </div>
+          <h3>Social Networks</h3>
+        </div>
+        <div class="card-content">
+          <div class="social-grid">
+            <a href="https://www.linkedin.com/in/d-judah-trementozzi-3240861a9/" class="social-platform linkedin" target="_blank">
+              <div class="platform-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </div>
+              <div class="platform-info">
+                <span class="platform-name">LinkedIn</span>
+                <span class="platform-desc">Professional Network</span>
+              </div>
+              <div class="platform-arrow">
+                <i class="fas fa-arrow-right"></i>
+              </div>
+            </a>
+            
+            <a rel="me" href="https://mastodon.social/@d_judah" class="social-platform mastodon" target="_blank">
+              <div class="platform-icon">
+                <img src="{{ url_for('static', filename='assets/logo-mastodon.svg') }}" alt="Mastodon" class="mastodon-icon">
+              </div>
+              <div class="platform-info">
+                <span class="platform-name">Mastodon</span>
+                <span class="platform-desc">Decentralized Social</span>
+              </div>
+              <div class="platform-arrow">
+                <i class="fas fa-arrow-right"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Availability Status -->
+      <div class="contact-card status-card">
+        <div class="card-header">
+          <div class="icon-container">
+            <i class="fas fa-clock"></i>
+            <div class="icon-glow"></div>
+          </div>
+          <h3>Availability</h3>
+        </div>
+        <div class="card-content">
+          <div class="status-indicator">
+            <div class="status-dot online"></div>
+            <span class="status-text">Available for Projects and Internships</span>
+          </div>
+          <div class="response-time">
+            <i class="fas fa-bolt"></i>
+            <span>Usually responds within 24 hours</span>
+          </div>
+          <div class="timezone-info">
+            <i class="fas fa-globe"></i>
+            <span>Brussels, Belgium (CET/CEST)</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+    movingBackgroundImage();
+  });
+</script>
+{% endblock %}

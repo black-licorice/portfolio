@@ -1,0 +1,1 @@
+As part of my bachelor's program, I developed a rudimentary cochlear implant, which provided me with valuable technical skills in handling modulated signals and demodulation, wireless power transfer, effiencency optimisation, as well as essential team management abilities such as using Gantt charts for project planning.

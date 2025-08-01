@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block link %}
+<link rel="stylesheet" href="./static/stylesheets/about.css">
+{% endblock %}
+
+
+{% block content %}
+  <div class="section-container">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="section-container-spacer text-center">
+              <h1 class="h2">02 : About me</h1>
+            </div>
+
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1">
+                <div class="row">
+                  <div class="col-xs-12 col-md-6">
+                    <h3>About me</h3>
+                    <p>Welcome to my website! I am currently pursuing a Master's degree in Aeronautical Engineering. My academic journey has equipped me with a strong foundation in engineering principles, which I have applied to various projects, including the development of a cochlear implant and a delivery and sorting robot. These experiences have honed my technical skills and underscored the importance of teamwork and project management.</p>
+                    <p>In addition to my technical expertise, I have developed valuable people skills through my student job at Lloyd Coffee, enhancing my ability to interact with diverse groups and build strong relationships. I am fluent in French and conversational in Dutch, which has allowed me to thrive in multicultural environments.</p>
+                    <p>I am currently seeking internships in the aeronautical engineering field, particularly in automated systems. Eager to apply my knowledge and skills in a practical setting, I look forward to contributing to innovative projects and exploring potential opportunities for collaboration. Thank you for visiting my website!</p>
+                  </div>
+                  <div class="col-xs-12 col-md-6">
+                    <div class="carousel-container">
+                      <div id="carousel" class="carousel slide projects-carousel"> <!--First carousel for the first project-->
+                        <div class="carousel-inner">
+                          {% for i in range(size) %}
+                            {% if i == 0%}
+                            <div class="item active">
+                            {% else %}
+                            <div class="item">
+                            {% endif %}
+                                <div class="carousel-image-wrapper">
+                                  <img src="./static/assets/images/profile_photos/{{profile_photos[i]}}" alt="Profile photo" class="img-responsive">
+                                </div>
+                            </div>
+                          {% endfor %}
+                        </div>
+                      </div>
+                      <a class="left carousel-control" href="#carousel" data-slide="prev">‹</a>
+                      <a class="right carousel-control" href="#carousel" data-slide="next">›</a>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+         </div>
+        </div>
+      </div>
+    </div>
+
+
+{% endblock %}

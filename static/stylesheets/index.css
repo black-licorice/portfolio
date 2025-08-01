@@ -1,0 +1,7 @@
+.background-image-container{
+    background-image: url(../assets/images/space.jpg);
+    background-size: contain; 
+    background-repeat:repeat; 
+    overflow: hidden;
+    scrollbar-width: none;
+}
