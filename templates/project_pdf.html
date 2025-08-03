@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block link %}
+<link rel="stylesheet" href="../static/stylesheets/pdf.css">
+{% endblock %}
+
+{% block content %}
+<div class="pdf-main-container">
+    <div class="pdf-section-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-10 col-xl-offset-1">
+                    <div class="pdf-header">
+                        <h3 class="text-center">Project Report</h3>
+                        <p class="text-center text-muted">Engineering Project</p>
+                    </div>
+                    <div class="pdf-container">
+                        <object 
+                            data="./static/assets/reports/{{ name }}.pdf" 
+                            type="application/pdf" 
+                            class="pdf-embed">
+                            <embed 
+                src="./static/assets/reports/{{name}}.pdf" 
+                                type="application/pdf" 
+                                class="pdf-embed">
+                                <div class="fallback text-center">
+                                    <p>Your browser doesn't support PDF embedding.</p>
+<a href="./static/assets/reports/{{ name }}.pdf') }}" 
+                                       class="btn btn-primary" 
+                                       target="_blank">
+                                        Download PDF Report
+                                    </a>
+                                </div>
+                            </embed>
+                        </object>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

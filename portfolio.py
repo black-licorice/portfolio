@@ -19,9 +19,9 @@ ba1_project_dir = Path(__file__).parent / "static/assets/images/cochlear_implant
 ba1_project_photos = [f"static/assets/images/cochlear_implant/{f.name}" for f in ba1_project_dir.iterdir() if f.is_file()]
 
 
-ba1_project = Work("Cochlear Implant", ba1_project_photos, Path("./static/assets/descriptions/cochlear_implant.txt").read_text(), '/implant_project')
 ba2_project = Work("Delivery Bot", ba2_project_photos, Path("./static/assets/descriptions/delivery_robot.txt").read_text(), '/robot_project')
-works = [ba1_project, ba2_project]
+ba1_project = Work("Cochlear Implant", ba1_project_photos, Path("./static/assets/descriptions/cochlear_implant.txt").read_text(), '/cochlear_implant_project')
+works = [ba2_project, ba1_project]
 
 profile_photos_dir = Path(__file__).parent / "static/assets/images/profile_photos"
 profile_photos = [f.name for f in profile_photos_dir.iterdir() if f.is_file()]
