@@ -4,8 +4,6 @@
 <link rel="stylesheet" href="./../static/stylesheets/project_description.css"></link>
 {% endblock %}
 
-
-
 {% block content %}
 <div class="section-container">
   <div class="container">
@@ -20,60 +18,92 @@
             
             <!-- Abstract Section -->
             <div class="project-section">
-              <h2>Abstract</h2>
-              <p>This project involved designing a wireless power transfer method and signal transmission system for a cochlear implant</p>
+              <h2 class="text-primary">Abstract</h2>
+              <p class="lead">This project involved designing a wireless power transfer method and signal transmission system for a cochlear implant</p>
             </div>
 
             <!-- Introduction Section -->
             <div class="project-section">
-              <h2>Introduction</h2>
-              <p>The general archetecture of cochlear implants is made up of an external part and an implanted internal part, the external part consists of a portable battery, microphone, a signal modulator and the primary prower transfer coil.</p>
-              <p>The internal part consists of a secondary power transfer coil, a signal demodulator and a set of electrodes that stimulate the auditory nerve. This project's objective was to design the internal sencondary coil and the signal demodulator such that minimal signal decay and maximum power transfer effeciency were achieved.</p> 
-            <!-- Strategy  -->
+              <h2 class="text-primary">Introduction</h2>
+              <div class="well">
+                <p>The general archetecture of cochlear implants is made up of an external part and an implanted internal part, the external part consists of a portable battery, microphone, a signal modulator and the primary prower transfer coil.</p>
+                <p>The internal part consists of a secondary power transfer coil, a signal demodulator and a set of electrodes that stimulate the auditory nerve. This project's objective was to design the internal sencondary coil and the signal demodulator such that minimal signal decay and maximum power transfer effeciency were achieved.</p>
+              </div>
+            </div>
+
+            <!-- Strategy Section -->
             <div class="project-section">
-              <h2>Project Strategy</h2>
+              <h2 class="text-primary">Project Strategy</h2>
               <p>Due to the state of the art at the time of this project, wireless power transfer was chosen to power the internal electronics and to transmit the audio signal was chosen.</p>
               <p>Thus the group focused on two main areas:</p>
-              <ul class="strategy-list">
-                <li><strong>Signal demodulation</strong>: Assuming the signal has been correctly transmitted to the secondary circuit, this needs a demodulation sub circuit in order to obtain the original audio signal.</li>
-                <li><strong>Power transfer effeciency</strong>: Design the main secondary circuit,in particular its coil in order to maximise power transfer effeciency.</li>
-              </ul>
+              <div class="row">
+                <div class="col-md-12">
+                  <ul class="strategy-list list-unstyled">
+                    <li class="well well-sm"><strong class="text-info">Signal demodulation</strong>: Assuming the signal has been correctly transmitted to the secondary circuit, this needs a demodulation sub circuit in order to obtain the original audio signal.</li>
+                    <li class="well well-sm"><strong class="text-info">Power transfer effeciency</strong>: Design the main secondary circuit,in particular its coil in order to maximise power transfer effeciency.</li>
+                  </ul>
+                </div>
+              </div>
             </div>
 
             <!-- Modeling Section -->
             <div class="project-section">
-              <h2>Demodulation</h2>
-              <p>For more effective power transfer the audio signal was amplitude modulated to 300kHz, once the signal has passed from the primary to the secondary, this signal then needed to be demodulated back within the range of frequencies audible to humans (between 20Hz and 20KHz).</p>
+              <h2 class="text-primary">Demodulation</h2>
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  <p>For more effective power transfer the audio signal was amplitude modulated to 300kHz, once the signal has passed from the primary to the secondary, this signal then needed to be demodulated back within the range of frequencies audible to humans (between 20Hz and 20KHz).</p>
+                </div>
+              </div>
               
-              <div class="image-grid">
-                <div class="image-container">
-                  <img src="../static/assets/images/cochlear_implant_report/circuit.png" class="project-image">
-                  <p class="image-caption">Demodulation circuit used in the project</p>
+              <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                  <div class="image-container text-center">
+                    <img src="../static/assets/images/cochlear_implant_report/circuit.png" alt="Demodulation circuit used in the project" class="project-image img-responsive">
+                    <p class="image-caption text-muted">Demodulation circuit used in the project</p>
+                  </div>
                 </div>
               </div>
             </div>
 
             <!-- Power Section -->
             <div class="project-section">
-              <h2>Power transfer</h2>
-                <p>In order to achieve the best power transfer effeciency a theoritical model-based approach was used to design the secondary coil. The model was based on the mutual inductance between the primary and secondary coils, which is a function of their geometry and the distance between them.</p>
-                <p>The model was used to determine the optimal coil parameters such as the number of turns, coil diameter, and wire gauge. The goal was to maximize the mutual inductance while minimizing losses due to resistance and other factors.</p>
-                <p>Once the theoretical model was established, a practical trial and error approach was used to refine the design and account for other influences like the proximity effect which was theoritacally difficult to model. This involved building prototypes of the secondary coil and testing them to find the best performance and interpolate the results were plotted against the nulber of turns and interpolated to obtain the most effcient number of turns for a given wire gauge.</p>
-                <div class="image-container">
-                  <img src="../static/assets/images/cochlear_implant_report/rendement_th.png" alt="Theoretical effeciency modelling results" class="project-image">
-                  <p class="image-caption">Theoretical model results</p>
+              <h2 class="text-primary">Power transfer</h2>
+              <div class="panel panel-info">
+                <div class="panel-body">
+                  <p>In order to achieve the best power transfer effeciency a theoritical model-based approach was used to design the secondary coil. The model was based on the mutual inductance between the primary and secondary coils, which is a function of their geometry and the distance between them.</p>
+                  <p>The model was used to determine the optimal coil parameters such as the number of turns, coil diameter, and wire gauge. The goal was to maximize the mutual inductance while minimizing losses due to resistance and other factors.</p>
+                  <p>Once the theoretical model was established, a practical trial and error approach was used to refine the design and account for other influences like the proximity effect which was theoritacally difficult to model. This involved building prototypes of the secondary coil and testing them to find the best performance and interpolate the results were plotted against the nulber of turns and interpolated to obtain the most effcient number of turns for a given wire gauge.</p>
                 </div>
-                <div class="image-container">
-                  <img src="../static/assets/images/cochlear_implant_report/rendement_int.png" alt="Interpolated results based on practical testing" class="project-image">
-                  <p class="image-caption">Interpolated results based on practical testing</p>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="image-container text-center">
+                    <img src="../static/assets/images/cochlear_implant_report/rendement_th.png" alt="Theoretical effeciency modelling results" class="project-image img-responsive">
+                    <p class="image-caption text-muted">Theoretical model results</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="image-container text-center">
+                    <img src="../static/assets/images/cochlear_implant_report/rendement_int.png" alt="Interpolated results based on practical testing" class="project-image img-responsive">
+                    <p class="image-caption text-muted">Interpolated results based on practical testing</p>
+                  </div>
+                </div>
+              </div>
             </div>
+
             <!-- Conclusion Section -->
             <div class="project-section">
-              <h2>Conclusion</h2>
-              <p>The project was a success, the demodulation circuit was able to recover the original audio signal with minimal distortion and the power transfer effeciency was maximised by optimising the secondary coil design.</p>
-              <p>Overall, the project taught valuable lessons about the challenges of system design and the importance of validating the theoretical results via practical testing and the possibility for underlying physical phenomena to cause practical results to diverge from the theoretical expectation</p>
-              <p><a href="/cochlear_implant_project_pdf">Read the final project report (in French) for a more in depth dive of the project including a SWOT report and biocompatibility study</a></p>
+              <h2 class="text-primary">Conclusion</h2>
+              <div class="panel panel-success">
+                <div class="panel-body">
+                  <p>The project was a success, the demodulation circuit was able to recover the original audio signal with minimal distortion and the power transfer effeciency was maximised by optimising the secondary coil design.</p>
+                  <p>Overall, the project taught valuable lessons about the challenges of system design and the importance of validating the theoretical results via practical testing and the possibility for underlying physical phenomena to cause practical results to diverge from the theoretical expectation</p>
+                  <p class="text-center"><a href="/cochlear_implant_project_pdf" class="btn btn-primary btn-lg">Read the final project report (in French)</a></p>
+                </div>
+              </div>
             </div>
+
           </div>
         </div>
       </div>
@@ -81,7 +111,4 @@
   </div>
 </div>
 
-
-
-{%endblock %}
-
+{% endblock %}

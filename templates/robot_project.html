@@ -18,130 +18,203 @@
             
             <!-- Abstract Section -->
             <div class="project-section">
-              <h2>Abstract</h2>
-              <p>The project involves constructing an autonomous robot that can navigate a map, pick up packages from houses, and deliver them to the correct locations. The robot must handle three types of objects: a cylinder, a rectangular prism, and a dumbbell. The map features six locations, with two designated for each type of object. The robot uses an Arduino Nano Every for control, DC motors, infrared sensors for line following, and servomotors for object manipulation.</p>
+              <h2 class="text-primary">Abstract</h2>
+              <p class="lead">The project involves constructing an autonomous robot that can navigate a map, pick up packages from houses, and deliver them to the correct locations. The robot must handle three types of objects: a cylinder, a rectangular prism, and a dumbbell. The map features six locations, with two designated for each type of object. The robot uses an Arduino Nano Every for control, DC motors, infrared sensors for line following, and servomotors for object manipulation.</p>
             </div>
 
             <!-- Introduction Section -->
             <div class="project-section">
-              <h2>Introduction</h2>
+              <h2 class="text-primary">Introduction</h2>
               <p>The project's goal is to develop a mailman robot that sorts and delivers objects to the correct houses. This has potential applications in large-scale enterprises like Amazon, where autonomous robots can streamline the sorting and delivery process.</p>
               
-              <div class="image-container">
-                <img src="{{ url_for('static', filename='assets/images/delivery_robot_report/Screenshot 2023-11-08 at 11.12.20.png') }}" alt="Map and object placement" class="project-image">
-                <p class="image-caption">Map and object placement</p>
+              <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                  <div class="image-container text-center">
+                    <img src="{{ url_for('static', filename='assets/images/delivery_robot_report/Screenshot 2023-11-08 at 11.12.20.png') }}" alt="Map and object placement" class="project-image img-responsive">
+                    <p class="image-caption text-muted">Map and object placement</p>
+                  </div>
+                </div>
               </div>
             </div>
 
             <!-- Project Strategy Section -->
             <div class="project-section">
-              <h2>Project Strategy</h2>
+              <h2 class="text-primary">Project Strategy</h2>
               <p>The group focused on three main areas:</p>
-              <ul class="strategy-list">
-                <li><strong>Computer Modeling</strong>: Designing a prototype using Fusion 360 and testing algorithms on Simulink.</li>
-                <li><strong>Component Selection and Construction</strong>: Choosing appropriate components and materials for the robot's construction.</li>
-                <li><strong>Testing and Model Validation</strong>: Testing the prototype and refining the model based on the results.</li>
-              </ul>
+              <div class="row">
+                <div class="col-md-12">
+                  <ul class="strategy-list list-unstyled">
+                    <li class="well well-sm"><strong class="text-info">Computer Modeling</strong>: Designing a prototype using Fusion 360 and testing algorithms on Simulink.</li>
+                    <li class="well well-sm"><strong class="text-info">Component Selection and Construction</strong>: Choosing appropriate components and materials for the robot's construction.</li>
+                    <li class="well well-sm"><strong class="text-info">Testing and Model Validation</strong>: Testing the prototype and refining the model based on the results.</li>
+                  </ul>
+                </div>
+              </div>
             </div>
 
             <!-- Modeling Section -->
             <div class="project-section">
-              <h2>Modeling</h2>
+              <h2 class="text-primary">Modeling</h2>
               <p>The robot uses a PID controller for line following. Simulink was used to model the robot's behavior and test the PID coefficients. The model includes simulations of sensors and motors to ensure the robot can follow the line accurately.</p>
               
-              <div class="image-grid">
-                <div class="image-container">
-                  <img src="{{ url_for('static', filename='/assets/images/delivery_robot_report/approxLinGauche.png') }}" alt="Angular speed of motors as a function of PWM command" class="project-image">
-                  <img src="{{ url_for('static', filename='/assets/images/delivery_robot_report/approxLinDroite.png') }}" alt="Angular speed of motors as a function of PWM command" class="project-image">
-                  <p class="image-caption">Angular speed of motors as a function of PWM command</p>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="image-container text-center">
+                    <img src="{{ url_for('static', filename='/assets/images/delivery_robot_report/approxLinGauche.png') }}" alt="Angular speed of motors as a function of PWM command" class="project-image img-responsive">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="image-container text-center">
+                    <img src="{{ url_for('static', filename='/assets/images/delivery_robot_report/approxLinDroite.png') }}" alt="Angular speed of motors as a function of PWM command" class="project-image img-responsive">
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <p class="image-caption text-center text-muted">Angular speed of motors as a function of PWM command</p>
                 </div>
               </div>
             </div>
 
             <!-- Components Section -->
             <div class="project-section">
-              <h2>Components</h2>
+              <h2 class="text-primary">Components</h2>
               <p>The robot's components include:</p>
               
-              <div class="component-subsection">
-                <h3>Control System</h3>
-                <ul>
-                  <li><strong>Arduino Nano Every</strong>: The microcontroller used for control</li>
-                  <li><strong>DC Motors</strong>: For moving the robot</li>
-                </ul>
-                <div class="image-container">
-                  <img src="{{ url_for('static', filename='assets/images/delivery_robot_report/moteur_courant_continue.jpg') }}" alt="DC motor kit and standard wheels" class="project-image">
-                  <p class="image-caption">DC motor kit and standard wheels</p>
-                </div>
-              </div>
-
-              <div class="component-subsection">
-                <h3>Sensors</h3>
-                <p><strong>Infrared Sensors</strong>: For line following</p>
-                <div class="image-grid">
-                  <div class="image-container">
-                    <img src="{{ url_for('static', filename='assets/images/delivery_robot_report/Capteur_analogique_DFRobot.png') }}" alt="Infrared sensor" class="project-image">
-                    <p class="image-caption">Infrared sensor</p>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="component-subsection panel panel-default">
+                    <div class="panel-heading">
+                      <h3 class="panel-title text-info">Control System</h3>
+                    </div>
+                    <div class="panel-body">
+                      <ul class="list-unstyled">
+                        <li><strong>Arduino Nano Every</strong>: The microcontroller used for control</li>
+                        <li><strong>DC Motors</strong>: For moving the robot</li>
+                      </ul>
+                      <div class="image-container text-center">
+                        <img src="{{ url_for('static', filename='assets/images/delivery_robot_report/moteur_courant_continue.jpg') }}" alt="DC motor kit and standard wheels" class="project-image img-responsive">
+                        <p class="image-caption text-muted">DC motor kit and standard wheels</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                
-                <p><strong>Ultrasonic Sensor</strong>: For detecting objects</p>
-                <div class="image-container">
-                  <img src="{{ url_for('static', filename='assets/images/delivery_robot_report/Ultrsonic_sensor.png') }}" alt="HC-SR04 ultrasonic sensor" class="project-image">
-                  <p class="image-caption">HC-SR04 ultrasonic sensor</p>
-                </div>
-              </div>
 
-              <div class="component-subsection">
-                <h3>Actuators</h3>
-                <p><strong>Servomotors</strong>: For manipulating the gripper</p>
-                <div class="image-container">
-                  <img src="{{ url_for('static', filename='assets/images/delivery_robot_report/Servo_motor.png') }}" alt="DF9GMS 360-degree servomotor" class="project-image">
-                  <p class="image-caption"> DF9GMS 360-degree servomotor</p>
+                <div class="col-md-4">
+                  <div class="component-subsection panel panel-default">
+                    <div class="panel-heading">
+                      <h3 class="panel-title text-info">Sensors</h3>
+                    </div>
+                    <div class="panel-body">
+                      <p><strong>Infrared Sensors</strong>: For line following</p>
+                      <div class="image-container text-center">
+                        <img src="{{ url_for('static', filename='assets/images/delivery_robot_report/Capteur_analogique_DFRobot.png') }}" alt="Infrared sensor" class="project-image img-responsive">
+                        <p class="image-caption text-muted">Infrared sensor</p>
+                      </div>
+                      
+                      <p><strong>Ultrasonic Sensor</strong>: For detecting objects</p>
+                      <div class="image-container text-center">
+                        <img src="{{ url_for('static', filename='assets/images/delivery_robot_report/Ultrsonic_sensor.png') }}" alt="HC-SR04 ultrasonic sensor" class="project-image img-responsive">
+                        <p class="image-caption text-muted">HC-SR04 ultrasonic sensor</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="component-subsection panel panel-default">
+                    <div class="panel-heading">
+                      <h3 class="panel-title text-info">Actuators</h3>
+                    </div>
+                    <div class="panel-body">
+                      <p><strong>Servomotors</strong>: For manipulating the gripper</p>
+                      <div class="image-container text-center">
+                        <img src="{{ url_for('static', filename='assets/images/delivery_robot_report/Servo_motor.png') }}" alt="DF9GMS 360-degree servomotor" class="project-image img-responsive">
+                        <p class="image-caption text-muted"> DF9GMS 360-degree servomotor</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
             <!-- Design Section -->
             <div class="project-section">
-              <h2>Design</h2>
+              <h2 class="text-primary">Design</h2>
               <p>Two stages of prototyping was done in order to seperate workflow. The fist stage was primarily focused on the line-following functionality and as such the first design did not yet include the claw structure seen in the second iteration.</p>
               
-              <div class="prototype-section">
-                <h3>First Prototype</h3>
-                <div class="image-grid">
-                  <div class="image-container">
-                    <img src="{{ url_for('static', filename='assets/images/delivery_robot_report/Proto_1_side.jpg') }}" alt="Photo of the first prototype side view" class="project-image">
-                    <p class="image-caption">Photo of the first prototype side view</p>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="prototype-section panel panel-info">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">First Prototype</h3>
+                    </div>
+                    <div class="panel-body">
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <div class="image-container text-center">
+                            <img src="{{ url_for('static', filename='assets/images/delivery_robot_report/Proto_1_side.jpg') }}" alt="Photo of the first prototype side view" class="project-image img-responsive">
+                            <p class="image-caption text-muted">Photo of the first prototype side view</p>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="image-container text-center">
+                            <img src="{{ url_for('static', filename='assets/images/delivery_robot_report/Proto_1_dessous.jpg') }}" alt="Photo of the first prototype bottom view" class="project-image img-responsive">
+                            <p class="image-caption text-muted">Photo of the first prototype bottom view</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="image-container">
-                    <img src="{{ url_for('static', filename='assets/images/delivery_robot_report/Proto_1_dessous.jpg') }}" alt="Photo of the first prototype bottom view" class="project-image">
-                    <p class="image-caption">Photo of the first prototype bottom view</p>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="prototype-section panel panel-info">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">Second Prototype</h3>
+                    </div>
+                    <div class="panel-body">
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <div class="image-container text-center">
+                            <img src="{{ url_for('static', filename='assets/images/delivery_robot_report/proto2p.jpg') }}" alt="Perspective view of the developed second prototype" class="project-image img-responsive">
+                            <p class="image-caption text-muted">Perspective view of the developed second prototype</p>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="image-container text-center">
+                            <img src="{{ url_for('static', filename='assets/images/delivery_robot_report/proto2h.jpg') }}" alt="Side view of the developed second prototype" class="project-image img-responsive">
+                            <p class="image-caption text-muted">Side view of the developed second prototype</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div class="gripper-section">
-                <h3>Gripper Design</h3>
-                <p>A gripper was designed in order effectively grap each type of package and house force sensors in order to detect the type of package while picking it up</p>
-                <div class="image-grid">
-                  <div class="image-container">
-                    <img src="{{ url_for('static', filename='assets/images/delivery_robot_report/pinceh2.png') }}" alt="A gripper with 3 joints" class="project-image">
-                    <img src="{{ url_for('static', filename='assets/images/delivery_robot_report/pincep.png') }}" alt="Another possible gripper to print with a camera" class="project-image">
-                    <p class="image-caption">The final design for the gripper</p>
-                  </div>
-                </div>
-              </div>
-              <div class="prototype-section">
-                <h3>Second Prototype</h3>
-                <div class="image-grid">
-                  <div class="image-container">
-                    <img src="{{ url_for('static', filename='assets/images/delivery_robot_report/proto2p.jpg') }}" alt="Perspective view of the developed second prototype" class="project-image">
-                    <p class="image-caption">Perspective view of the developed second prototype</p>
-                  </div>
-                  <div class="image-container">
-                    <img src="{{ url_for('static', filename='assets/images/delivery_robot_report/proto2h.jpg') }}" alt="Side view of the developed second prototype" class="project-image">
-                    <p class="image-caption">Side view of the developed second prototype</p>
+              <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                  <div class="gripper-section panel panel-success">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">Gripper Design</h3>
+                    </div>
+                    <div class="panel-body">
+                      <p>A gripper was designed in order effectively grap each type of package and house force sensors in order to detect the type of package while picking it up</p>
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <div class="image-container text-center">
+                            <img src="{{ url_for('static', filename='assets/images/delivery_robot_report/pinceh2.png') }}" alt="A gripper with 3 joints" class="project-image img-responsive">
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="image-container text-center">
+                            <img src="{{ url_for('static', filename='assets/images/delivery_robot_report/pincep.png') }}" alt="Another possible gripper to print with a camera" class="project-image img-responsive">
+                          </div>
+                        </div>
+                        <div class="col-sm-12">
+                          <p class="image-caption text-center text-muted">The final design for the gripper</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -149,43 +222,57 @@
 
             <!-- Arduino Implementation Section -->
             <div class="project-section">
-              <h2>Realization in Arduino</h2>
+              <h2 class="text-primary">Realization in Arduino</h2>
               <p>The Arduino code includes functions for calibrating sensors, implementing the PID controller, detecting branches in the line, and scanning for objects. The robot uses a combination of infrared and ultrasonic sensors to navigate and recognize objects.</p>
               
-              <div class="image-grid">
-                <div class="image-container">
-                  <img src="{{ url_for('static', filename='assets/images/delivery_robot_report/flowCode.png') }}" alt="Flowchart of the piloting code" class="project-image">
-                  <p class="image-caption">Flowchart of the piloting code</p>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="image-container text-center">
+                    <img src="{{ url_for('static', filename='assets/images/delivery_robot_report/flowCode.png') }}" alt="Flowchart of the piloting code" class="project-image img-responsive">
+                    <p class="image-caption text-muted">Flowchart of the piloting code</p>
+                  </div>
                 </div>
-                <div class="image-container">
-                  <img src="{{ url_for('static', filename='assets/images/delivery_robot_report/flowScan.png') }}" alt="Flowchart of the scan function" class="project-image">
-                  <p class="image-caption">Flowchart of the scan function</p>
+                <div class="col-md-6">
+                  <div class="image-container text-center">
+                    <img src="{{ url_for('static', filename='assets/images/delivery_robot_report/flowScan.png') }}" alt="Flowchart of the scan function" class="project-image img-responsive">
+                    <p class="image-caption text-muted">Flowchart of the scan function</p>
+                  </div>
                 </div>
               </div>
             </div>
 
             <!-- Program Section -->
             <div class="project-section">
-              <h2>Program</h2>
+              <h2 class="text-primary">Program</h2>
               <p>The robot's algorithms are written in Arduino C++. Key functions include:</p>
-              <ul class="algorithm-list">
-                <li><strong>Sorting Algorithm</strong>: Determines the order in which the robot should visit houses to sort the objects.</li>
-                <li><strong>Line Following Algorithm</strong>: Uses infrared sensors and a PID controller to keep the robot on the line.</li>
-              </ul>
+              <div class="row">
+                <div class="col-md-12">
+                  <ul class="algorithm-list list-unstyled">
+                    <li class="well well-sm"><strong class="text-success">Sorting Algorithm</strong>: Determines the order in which the robot should visit houses to sort the objects.</li>
+                    <li class="well well-sm"><strong class="text-success">Line Following Algorithm</strong>: Uses infrared sensors and a PID controller to keep the robot on the line.</li>
+                  </ul>
+                </div>
+              </div>
             </div>
 
             <!-- Project Management Section -->
             <div class="project-section">
-              <h2>Project Management</h2>
-              <p>The project was managed using tools like Gantt charts, GitLab, and status reports. The group faced challenges such as component availability, design issues, and time management. A SWOT analysis was conducted to identify strengths, weaknesses, opportunities, and threats.</p>
+              <h2 class="text-primary">Project Management</h2>
+              <div class="well">
+                <p>The project was managed using tools like Gantt charts, GitLab, and status reports. The group faced challenges such as component availability, design issues, and time management. A SWOT analysis was conducted to identify strengths, weaknesses, opportunities, and threats.</p>
+              </div>
             </div>
 
             <!-- Conclusion Section -->
             <div class="project-section">
-              <h2>Conclusion</h2>
-              <p>The project involved significant learning and problem-solving. Key lessons included the importance of accurate modeling, effective piloting, gripper design, and overall robot design. The group successfully developed a prototype that could navigate and sort objects, although there were challenges and areas for improvement.</p>
-              <p>This project taught valuable lessons about system design, component selection, and the importance of iterative testing and refinement as well as key skills in project management and teamwork.</p>
-              <p><a href="/robot_project_pdf">Read the final project report (in French)</a></p>
+              <h2 class="text-primary">Conclusion</h2>
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  <p>The project involved significant learning and problem-solving. Key lessons included the importance of accurate modeling, effective piloting, gripper design, and overall robot design. The group successfully developed a prototype that could navigate and sort objects, although there were challenges and areas for improvement.</p>
+                  <p>This project taught valuable lessons about system design, component selection, and the importance of iterative testing and refinement as well as key skills in project management and teamwork.</p>
+                  <p class="text-center"><a href="/robot_project_pdf" class="btn btn-primary btn-lg">Read the final project report (in French)</a></p>
+                </div>
+              </div>
             </div>
 
           </div>
