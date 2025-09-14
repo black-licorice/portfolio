@@ -20,22 +20,15 @@
         {% block link %}
         {% endblock %}
   </head>
-  {% if index or name == "contact"%}
-    <body style="background-color: black;">
-  {% else %}
+ 
     <body >
-  {% endif %}
     <div id="site-border-left"></div>
     <div id="site-border-right"></div>
     <div id="site-border-top"></div>
     <div id="site-border-bottom"></div>
      <!-- Add your content of header -->
     <header>
-      {% if index or name == "contact"%}
-      <nav class="navbar  navbar-fixed-top navbar-inverse">
-      {% else %}
       <nav class="navbar  navbar-fixed-top navbar-default">
-      {% endif %}
         <div class="container">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
               <span class="sr-only">Toggle navigation</span>

@@ -1,7 +1,12 @@
 .background-image-container{
-    background-image: url(../assets/images/space.jpg);
-    background-size: contain; 
+    background-image: url(../assets/images/IM1.png);
+    gray-scale(50%);
+    background-size: fill; 
     background-repeat:repeat; 
     overflow: hidden;
     scrollbar-width: none;
 }
+.navbar-default{
+    background-color: rgba(0, 0, 0, 0);
+}
+
