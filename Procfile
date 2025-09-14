@@ -1,1 +1,1 @@
-web: gunicorn portfolio:app
+web: gunicorn --bind 0.0.0.0:$PORT portfolio:app
