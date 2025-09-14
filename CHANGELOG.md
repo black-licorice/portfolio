@@ -1,6 +1,6 @@
 # Changelog
 
-## [ff864d1] - 2025-09-14 - Made website morestylistically consistent
+## [ff864d1] - 2025-09-14 - Made website more stylistically consistent
 
 ### Added
 **New Images for Index and Contact pages**
