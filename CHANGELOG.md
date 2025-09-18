@@ -1,9 +1,8 @@
 # Changelog
 
-## 2025-09-14 - Made website more stylistically consistent
+## 2025-09-17 Added requirements and heroku procfile for hosting
 
 ### Added
-**New Images for Index and Contact pages**
+**requirements.txt, Procfile**
 
 ### Changes 
-Simlified contact page made index and contact pages more consistent with the other pages
