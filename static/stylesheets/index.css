@@ -1,6 +1,5 @@
 .background-image-container{
     background-image: url(../assets/images/IM1.png);
-    gray-scale(50%);
     background-size: fill; 
     background-repeat:repeat; 
     overflow: hidden;
@@ -10,3 +9,46 @@
     background-color: rgba(0, 0, 0, 0);
 }
 
+p.h1, p.h2{
+    text-shadow: none;
+    color: rgb(100, 91, 91);
+    font-weight: lighter;
+}
+#right-blurb{
+    border-radius: 4%;
+    right: 15%;
+    top: 65%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    width: 600px;
+    color: white;
+}
+p.h3{
+    font-weight: lighter;
+    text-shadow: none;
+    font-family: Roboto Mono;
+    font-size: medium;
+    text-shadow: none;
+    padding-top: 15px;
+}
+p.h4{
+    font-weight: lighter;
+    text-shadow: none;
+    font-family: Roboto Mono;
+    font-size: small;
+    text-shadow: none;
+    padding-top: 15px;
+}
+@media (max-width: 600px) {
+    #right-blurb{
+        right: 10%;
+        top: 65%;
+        width: 300px;
+    }
+    p.h1, p.h2{
+        font-size: 48px;
+    }
+    p.h2{
+        font-size: 24px;
+    }
+}

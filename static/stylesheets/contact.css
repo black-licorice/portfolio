@@ -4,13 +4,21 @@
     background-repeat:repeat; 
     overflow: hidden;
     scrollbar-width: none;
+    font-family: Roboto mono;
+
 }
 .navbar-default{
     background-color: rgba(0, 0, 0, 0);
 }
 .card{
-  background-color: rgba(0,0,0,0.3);
-  height: 100px;
+  background-color: rgba(0,0,0,0.4);
+  height: 150px;
+  width: 400px;
+
+}
+h3.card-title, p.card-text{
+  text-shadow: none;
+  font-family: Roboto Mono;
 }
 a{
   font-weight: bold;
@@ -28,4 +36,53 @@ a{
 }
 .h5{
   font-size: 10px;
+}
+h1.h2{
+  font-family: Roboto Mono;
+}
+
+.socmed{
+  position: absolute;
+  right:40%;
+  top: 50%;
+}
+.email{
+  position: absolute;
+  right: 50%;
+  top: 25%;
+}
+.availability{
+  position: absolute;
+  right: 30%;
+  top: 75%;
+}
+@media (max-width: 1000px) {
+  .socmed{
+    position: absolute;
+    right:30%;
+    top: 50%;
+  }
+  .email{
+    position: absolute;
+    right: 40%;
+    top: 25%;
+  }
+  .availability{
+    position: absolute;
+    right: 20%;
+    top: 75%;
+  }
+
+}
+@media (max-width: 800px) {
+  .availability, .socmed, .email{
+    position: absolute;
+    right: 25%;
+  }
+}
+@media (max-width: 600px) {
+  .availability, .socmed, .email{
+    position: absolute;
+    right: 5%;
+  }
 }

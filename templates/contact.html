@@ -7,35 +7,42 @@
 
 {% block content %}
 <div class="hero-full-container background-image-container">
-<div class="container mt-5">
-    <!-- Title -->
-  <div class="section-container-spacer text-center">
+   <div class="section-container-spacer text-center">
     <h1 class="h2"> 04 : Contact </h1>
   </div>
+<div class="container mt-5">
+    <!-- Title -->
+
 
 
 
 <div class="card-group white-text-container">
-  <div class="card">
-    <div class="card-body tex text-center">
-      <h3 class="card-title">Digital Communication  <i class="fas fa-envelope"></i></h3>
-      <p class="h4">Professional email: <a href="mailto:d.judah.trementozzi@mailfence.com">d.judah.trementozzi@mailfence.com </a> </p>
-      <p class="card-text h4">Academic email: <a href="mailto:david.trementozzi@ulb.be">david.trementozzi@ulb.be </a> </p>
+  <div class="row">
+    <div class="card col-sm-6 email">
+      <div class="card-body tex text-center" >
+        <h3 class="card-title">Digital Communication  </h3>
+        <p class="h4 card-text">Professional email: <a href="mailto:d.judah.trementozzi@mailfence.com">d.judah.trementozzi@mailfence.com </a> </p>
+        <p class="card-text h4">Academic email: <a href="mailto:david.trementozzi@ulb.be">david.trementozzi@ulb.be </a> </p>
+      </div>
     </div>
   </div>
-  <div class="card">
-    <div class="card-body text-center">
-      <h3 class="card-title">Social Media <i class="fas fa-share-nodes"></i></h3>
-      <a href="https://mastodon.social/@d_judah"><p class="card-text h4"><img src="{{ url_for('static', filename='assets/logo-mastodon.svg') }}" alt="Mastodon" class="mastodon-icon">    Mastodon</p> </a>
-      <a href="https://www.linkedin.com/in/d-judah-trementozzi-3240861a9/"><p class="card-text h4"><i class="fab fa-linkedin"></i>    LinkedIn</p> </a>
+  <div class="row">
+    <div class="card col-sm-6 socmed">
+      <div class="card-body text-center">
+        <h3 class="card-title">Social Media </h3>
+        <a href="https://mastodon.social/@d_judah"><p class="card-text h4"><img src="{{ url_for('static', filename='assets/logo-mastodon.svg') }}" alt="Mastodon" class="mastodon-icon">    Mastodon</p> </a>
+        <a href="https://www.linkedin.com/in/d-judah-trementozzi-3240861a9/"><p class="card-text h4"><i class="fab fa-linkedin"></i>    LinkedIn</p> </a>
+      </div>
     </div>
   </div>
-  <div class="card">
-    <div class="card-body text-center">
-      <h3 class="card-title">Availability <i class="fas fa-clock"></i></h3>
-      <p class="card-text h4">Available for Projects and Internships</p>
-      <p class="card-text h5"><i class="fas fa-bolt"></i>    Usually responds within 24 hours</p>
-      <p class="card-text h5"><i class="fas fa-globe"></i>    Brussels, Belgium (CET/CEST)</p>
+  <div class="row">
+    <div class="card col-sm-6 availability">
+      <div class="card-body text-center">
+        <h3 class="card-title">Availability </h3>
+        <p class="card-text h4">Available for Projects and Internships</p>
+        <p class="card-text h5"><i class="fas fa-bolt"></i>    Usually responds within 24 hours</p>
+        <p class="card-text h5"><i class="fas fa-globe"></i>    Brussels, Belgium (CET/CEST)</p>
+      </div>
     </div>
   </div>
 </div>
