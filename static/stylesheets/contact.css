@@ -41,6 +41,11 @@ h1.h2{
   font-family: Roboto Mono;
 }
 
+
+#title{
+  padding-top: 80px;
+}
+
 .socmed{
   position: absolute;
   right:40%;
