@@ -2,7 +2,7 @@
     background-image: url(../assets/images/IM1.png);
     background-size: fill; 
     background-repeat:repeat; 
-    overflow: hidden;
+    overflow: scroll;
     scrollbar-width: none;
     font-family: Roboto mono;
 
@@ -44,6 +44,10 @@ h1.h2{
 
 #title{
   padding-top: 80px;
+}
+
+.card-body p{
+  font-size: 14px;
 }
 
 .socmed{
